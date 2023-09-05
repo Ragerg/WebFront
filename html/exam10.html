@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>audio/video/iframe</title>
+  </head>
+  <body>
+    <h2>HTML5 이전 버전 : embed 태그 사용</h2>
+    <embed src="./playlist/bear.mp3" />
+
+    <h2>HTML5 버전 : audio 태그 사용</h2>
+    <audio src="./playlist/bear.mp3" controls autoplay></audio>
+
+    <h2>HTML5 이전 버전 : embed 태그 사용</h2>
+    <embed src="./playlist/bear.mp4" />
+
+    <h2>HTML5 버전 : video 태그 사용</h2>
+    <video src="./playlist/bear.mp4" controls width="500" height="480"></video>
+
+    <h2>YOUTUBE</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/gfk3QLU1x0E?si=P1mpPPsSjNi0T2M0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <hr />
+    <iframe
+      src="playlist/웹프론트엔드프로그래밍.pdf"
+      width="640"
+      height="800"
+    ></iframe>
+  </body>
+</html>
