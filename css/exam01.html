@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>css</title>
+    <style>
+      p {
+        color: orange !important; /* <!-- 최우선순위-->; */
+      }
+
+      h2 {
+        color: green;
+        background-color: yellowgreen;
+      }
+
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello World!</p>
+    <p style="color: red">Hello World!</p>
+    <h2>Hello World!</h2>
+  </body>
+</html>
