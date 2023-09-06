@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: navy;
+            background-image: url('../html/image/dog02.jpg');
+            background-repeat: repeat;
+            /* background-position: 100px 100px; */
+        }
+        
+        div.style01 {
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            width: 800px;
+            padding: 20px;
+            font-size: 20pt;
+            background-color: orange;
+            background-image: url('../html/image/icon.png');
+            background-repeat: no-repeat;
+            background-size: 150px;
+            background-position: right bottom;
+            background-origin: padding-box; 
+            /* background-origin: content-box; */
+            /* background-origin: border-box; */
+            border: 10px dotted yellow;
+        }
+
+        div.style02 {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            border: 5px solid lightgoldenrodyellow;
+        }
+        
+        /* 
+            ^= '이걸로 시작하면'
+            $= '이걸로 끝나면'
+            *= '이게 들어가면'
+        */
+        img[src ^= '../html/image'] {
+            border-color: aliceblue;
+        }
+
+        img[src $= 'jpg'] {
+            border-color: chartreuse;
+        }
+
+        img[src *= 'image'] {
+            border-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="style01">
+        <h2>상담일지</h2>
+        <p>
+            2023년 09월 06일<br>
+            학생 몇 명이 토요일날 나오기 싫다고 함!!!<br>
+            대처 : 나오지 말라고 함
+        </p>
+    </div>
+    <div class="style02">
+        <img src="../html/image/dog01.jpg" alt="멍멍">
+        <input type="text">
+    </div>
+</body>
+</html>
