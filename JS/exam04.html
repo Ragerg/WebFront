@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = Number(prompt('정수를 입력하세요'))
+
+        let msg = `${num} : ${num % 2 ? "홀수다" : "짝수다"}`
+        alert(msg)
+
+        switch(num % 2) { //n개 중에 다중선택
+            case 1 :
+                alert(`${num}은  홀수`)
+                break
+            case 0 :
+                alert(`${num}은  짝수`)
+                break
+        }
+
+        if(num % 2) { //n개 중에 1개 선택
+            alert(`${num} :  홀수`)
+        } else {
+            alert(`${num} :  짝수`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

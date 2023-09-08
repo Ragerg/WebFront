@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let array = [10, 20, 30, 40]
+        // let copy = array    // Shallow copy(얕은 복사) / 주소값을 복사
+        
+        // Deep copy(깊은 복사)
+        // let copy = [...array]
+        let copy = array.map(function(element){
+            return element
+        })
+
+        /*
+        let copy = []
+        for(let data of array) {
+            copy.push(data)
+        }
+        */
+
+        document.write(`array :  [${array}] <br>`)
+        document.write(`copy :  [${copy}] <br>`)
+        document.write(`<hr>`)
+        
+        copy[2] = 10000
+        document.write(`array :  [${array}] <br>`)
+        document.write(`copy :  [${copy}] <br>`)
+        document.write(`<hr>`)
+        
+        let bool = false
+        for(let data of array) {
+            if(data % 3 == 0) {
+                bool = true
+                break
+            }
+        }
+        document.write(`${bool}<br>`)
+        
+        //  모든 원소가 3의 배수야??
+        bool = array.every(function(element){
+            return element % 3 == 0
+        })
+        document.write(`${bool}<br>`)
+        //  원소 중에 3의 배수가 있어??
+        bool = array.some(function(element){
+            return element % 3 == 0
+        })
+        document.write(`${bool}<br>`)
+        document.write(`<hr>`)
+        
+        let s = 0
+        for(let data of array){
+            s += data
+        }
+        document.write(`${s}<br>`)
+        
+        s = array.reduce(function(element, right) {
+            return element + right
+        })
+        document.write(`${s}<br>`)
+        document.write(`<hr>`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
