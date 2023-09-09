@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let divTag = document.querySelector('div')
+            let h1Tag = document.querySelector('h1')
+            let spanTag = document.querySelector('span')
+
+            divTag.onclick = function() {
+                alert('div click...')
+            }
+
+            h1Tag.onclick = function(e) {
+                alert('h1 click...')
+                console.log(e)
+                e.cancelBubble = true // 버블링 중단
+            }
+
+            spanTag.onclick = function() {
+                alert('span click...')
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>
+            <span>Hello</span>
+        </h1>
+    </div>
+</body>
+</html>
