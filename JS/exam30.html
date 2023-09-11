@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let person = {
+            name : '홍길동',
+            phone : '010-1111-2222',
+            'office-phone' : '02-3456-7890',    // 특수기호가 들어가는 경우 받드시 '' 나 ""로 묶어야함
+            'age' : 26      // key값은 '',"" 써도 되고 안써도 됨
+        }
+
+        document.write(`name : ${person.name}<br>`)
+        document.write(`phone : ${person.phone}<br>`)
+        document.write(`office-phone : ${person['office-phone']}<br>`)
+        document.write(`age : ${person.age}<br>`)
+        document.write('<hr>')
+        document.write(`name 속성 존재여부 : ${ 'name' in person}<br>`)
+        document.write(`addr 속성 존재여부 : ${ 'addr' in person}<br>`)
+        document.write('<hr>')
+        
+        person.addr = '경기도 성남시 수정로 3'
+        console.log(person)
+        document.write(`name 속성 존재여부 : ${ 'name' in person}<br>`)
+        document.write(`addr 속성 존재여부 : ${ 'addr' in person}<br>`)
+        document.write('<hr>')
+
+        with(person) {
+            document.write(`name : ${name}<br>`)
+            document.write(`addr : ${addr}<br>`)
+        }
+
+    </script>
+</head>
+<body>
+    
+
+
+</body>
+</html>
