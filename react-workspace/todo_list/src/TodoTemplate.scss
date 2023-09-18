@@ -1,0 +1,17 @@
+.todoTemplate {
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    border-radius: 6px;
+}
+
+.todo-title {
+    display: flex;
+    background-color: pink;
+    color: whitesmoke;
+    min-height: 4em;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
