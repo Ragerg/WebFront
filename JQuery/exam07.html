@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // <h1>세 번째 문장</h1>
+            $('#add').click(function() {
+                $('div').append('<h1>세 번째 문장</h1>') // 같은 div 내에 생성
+                // $('div').prepend('<h1>세 번째 문장</h1>')
+                // $('div').after('<h1>세 번째 문장</h1>') // 같은 레벨에 생성
+                // $('div').before('<h1>세 번째 문장</h1>')
+            })
+
+            $('#del').click(function() {
+                $('h1:first').remove()
+            })
+
+            $('#red').click(function() {
+                // $('h1').css('color', 'red')
+                $('h1').removeClass('blue').addClass('red')
+            })
+            
+            $('#blue').click(function() {
+                // $('h1').css('color', 'blue')
+                $('h1').removeClass('red').addClass('blue')
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1>첫 번째 문장</h1>
+        <h1>두 번째 문장</h1>
+    </div>
+    <button id="add">ADD</button>
+    <button id="del">DELETE</button>
+    <button id="red">RED</button>
+    <button id="blue">BLUE</button>
+</body>
+</html>

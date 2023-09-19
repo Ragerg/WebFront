@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        // window.onload = function() {
+        //     alert('로드완료....')
+        // }
+
+/*
+        $(선택자).함수() // 선택자는 css와 동일하다
+        $(document).ready(function() {
+            alert('ready...')
+        })
+
+        $(document).ready(function() {
+            alert('ready2...')
+        })
+
+        $(function() {
+            alert('ready3...')
+        })
+*/
+
+        $(function() {
+            alert('ready')
+            // $('ul li').hide()
+            // $('ul li:first').hide() // 호랑이만 없어짐
+            $('ul li:first-child').hide() // 호랑이랑 김밥 없어짐
+        })
+
+        // $(function() {
+        //     alert('ready')
+        //     // $('h1').hide(1000)
+        //     // $('#id01').hide()
+        //     // $('.class01').hide()
+        //     // $('h1 + h1').hide()
+        //     // $('h1:first').hide()
+        // })
+    </script>
+</head>
+<body>
+    <h1>동물종류</h1>
+    <ul>
+        <li>호랑이</li>
+        <li>사자</li>
+        <li>팬더</li>
+        <li>코끼리</li>
+    </ul>
+    <h1>음식종류</h1>
+    <ul>
+        <li>김밥</li>
+        <li>순대</li>
+        <li>튀김</li>
+    </ul>
+    <h1 id="id01">Hello</h1>
+    <h1 class="class01">Hi</h1>
+</body>
+</html>
